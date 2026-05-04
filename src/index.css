@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #020617; /* Deep Space */
+    color: #f8fafc; /* Pure White */
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar for Webkit */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #020617;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+  }
+
+  /* Typography utilities */
+  .text-glow {
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+}
+
+.tech-icon {
+  position: relative;
+  width: 50px;
+  transition: all;
+  transition-duration: 1s;
+}
+.tech-icon:hover {
+  transform: scale(1.3);
+}
