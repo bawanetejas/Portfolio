@@ -95,11 +95,11 @@ export default function HeroSection() {
                     transition={{ delay: 1.2, duration: 0.8 }}
                     className="flex flex-wrap items-center gap-6"
                 >
-                    <a href="https://www.linkedin.com/in/tej-bawane1" aria-label="LinkedIn" className="p-3 border border-[#1E293B] rounded-full hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all bg-[#020617] relative group">
+                    <a href="https://www.linkedin.com/in/tej-bawane1" target='_blank' aria-label="LinkedIn" className="p-3 border border-[#1E293B] rounded-full hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all bg-[#020617] relative group">
                         <div className="absolute inset-0 bg-[#38BDF8] opacity-0 group-hover:opacity-10 rounded-full transition-opacity"></div>
                         <LinkedinIcon />
                     </a>
-                    <a href="https://github.com/bawanetejas" aria-label="GitHub" className="p-3 border border-[#1E293B] rounded-full hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all bg-[#020617] relative group">
+                    <a href="https://github.com/bawanetejas" target='_blank' aria-label="GitHub" className="p-3 border border-[#1E293B] rounded-full hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all bg-[#020617] relative group">
                         <div className="absolute inset-0 bg-[#38BDF8] opacity-0 group-hover:opacity-10 rounded-full transition-opacity"></div>
                         <GithubIcon />
                     </a>
@@ -109,8 +109,8 @@ export default function HeroSection() {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#38BDF8]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                         <ShieldIcon className="text-[#38BDF8]" />
                         <div>
-                            <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold">LeetCode</p>
-                            <p className="text-sm font-bold text-[#F8FAFC]">Knight Badge</p>
+                            <a href='https://drive.google.com/file/d/1E9xzqXgZ3tUVGd6u_SwkGqsaDk_G3M1G/view?usp=sharing' target='_blank'
+                                className="text-xs text-slate-200 uppercase tracking-wider font-bold">Resume</a>
                         </div>
                     </div>
                 </motion.div>

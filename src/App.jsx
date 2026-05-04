@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import EducationSection from './components/Education';
 import About from './components/About';
 import ContactSection from './components/Contactus';
+import PersonalProjects from './components/PersonalProjects';
 
 // --- Reusable SVG Icons (No external libraries) ---
 const GithubIcon = () => (
@@ -40,6 +41,7 @@ const App = () => {
         <HeroSection />
         <SkillSection />
         <Experience />
+        <PersonalProjects />
         <EducationSection />
         <About />
         <ContactSection />
