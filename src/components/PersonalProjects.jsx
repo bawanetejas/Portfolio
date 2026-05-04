@@ -35,9 +35,9 @@ export default function PersonalProjects() {
         },
         {
             title: "Real-time Collaborative Task Manager",
-            description: "Built a Trello-like application emphasizing WebSocket implementation for instant updates across multiple clients.",
+            description: "Built collaborative task management tool for instant updates across multiple clients.",
             features: [
-                "Real-time drag-and-drop state sync via Socket.io",
+                "User can create team add task and assigne to specic user",
                 "Optimistic UI updates for seamless UX",
                 "Project-based team permissions",
                 "Activity logs per task card"
