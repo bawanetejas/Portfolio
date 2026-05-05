@@ -31,7 +31,7 @@ export default function Techstack() {
                 <img src={HTML} loading='lazy' className='tech-icon' />
                 <img src={css} loading='lazy' className='tech-icon' />
                 <img src={js} loading='lazy' className='tech-icon' />
-                <img src={Github} loading='lazy' className='tech-icon  rounded-full' />
+                <img src={Github} loading='lazy' className='tech-icon bg-white  rounded-full' />
                 <img src={Bootstrap} loading='lazy' className='tech-icon' />
                 <img src={tailwind} loading='lazy' className='tech-icon' />
                 <img src={react} loading='lazy' className='tech-icon' />
@@ -45,7 +45,6 @@ export default function Techstack() {
                 <img src={Jwt} loading='lazy' className='tech-icon' />
                 <img src={Aws} loading='lazy' className='tech-icon  rounded-full' />
                 <img src={Git} loading='lazy' className='tech-icon' />
-
                 <img src={Postman} loading='lazy' className='tech-icon  rounded-full' />
                 <img src={Vercel} loading='lazy' className='tech-icon bg-white  rounded-full' />
 
