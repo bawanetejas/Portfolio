@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { supabase } from '../lib/supabase';
 
 // --- Reusable SVG Icons (No external libraries) ---
 const GithubIcon = () => (
@@ -19,7 +20,32 @@ const ShieldIcon = () => (
 );
 
 export default function ContactSection() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+    function handleInput(e) {
+        const { name, value } = e.target;
+        setFormData((pre) => ({
+            ...pre,
+            [name]: value
+        }));
 
+    }
+    const [honeypot, setHoneypot] = useState('');
+
+    async function formHandler(e) {
+        e.preventDefault();
+        if (honeypot) {
+            console.warn("bot detected");
+            return;
+        }
+        await supabase
+            .from("contacts")
+            .insert([formData]);
+
+    }
     return (
         <section className="min-h-screen bg-[#0F172A] flex flex-col relative z-20 transition-colors duration-1000">
             <div className="grow flex items-center justify-center px-6 py-24">
@@ -34,21 +60,44 @@ export default function ContactSection() {
                         Ready to architect reliable systems and optimize execution? Let's initiate a dialogue.
                     </p>
 
-                    <form className="flex flex-col gap-6 text-left" onSubmit={(e) => e.preventDefault()}>
+                    <form className="flex flex-col gap-6 text-left" onSubmit={formHandler}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="flex flex-col">
                                 <label htmlFor="name" className="text-sm text-slate-400 mb-2 font-mono">Name</label>
                                 <input
                                     type="text"
                                     id="name"
+                                    name='name'
+                                    value={formData.name}
+                                    onChange={handleInput}
                                     className="bg-[#020617] border border-[#1E293B] rounded-lg p-4 text-white focus:outline-none focus:ring-2 focus:ring-[#38BDF8] transition-all"
                                     placeholder="John Doe"
+                                />
+                            </div>
+
+                            {/* HONEYPOT - Hidden from humans, visible to bots */}
+                            <div
+                                style={{ position: "absolute", left: "-9999px" }}
+                                aria-hidden="true"
+                            >
+                                <label htmlFor="website">Website</label>
+                                <input
+                                    type="text"
+                                    id="website"
+                                    name="website"
+                                    value={honeypot}
+                                    onChange={(e) => setHoneypot(e.target.value)}
+                                    tabIndex={-1}
+                                    autoComplete="off"
                                 />
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="email" className="text-sm text-slate-400 mb-2 font-mono">Email</label>
                                 <input
                                     type="email"
+                                    name='email'
+                                    value={formData.email}
+                                    onChange={handleInput}
                                     id="email"
                                     className="bg-[#020617] border border-[#1E293B] rounded-lg p-4 text-white focus:outline-none focus:ring-2 focus:ring-[#38BDF8] transition-all"
                                     placeholder="john@example.com"
@@ -59,12 +108,16 @@ export default function ContactSection() {
                             <label htmlFor="message" className="text-sm text-slate-400 mb-2 font-mono">Message</label>
                             <textarea
                                 id="message"
+                                name='message'
+                                value={formData.message}
+                                onChange={handleInput}
                                 rows="5"
                                 className="bg-[#020617] border border-[#1E293B] rounded-lg p-4 text-white focus:outline-none focus:ring-2 focus:ring-[#38BDF8] transition-all resize-none"
                                 placeholder="Discussing architecture..."
                             ></textarea>
                         </div>
                         <button
+                            type='submit'
                             aria-label="Submit Contact Form"
                             className="mt-4 px-8 py-4 bg-[#38BDF8] text-[#020617] font-bold rounded-lg hover:bg-sky-300 transition-colors shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:shadow-[0_0_25px_rgba(56,189,248,0.5)] w-full md:w-auto md:self-center"
                         >
