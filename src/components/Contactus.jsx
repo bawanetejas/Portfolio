@@ -45,6 +45,8 @@ export default function ContactSection() {
             .from("contacts")
             .insert([formData]);
 
+        alert("message is sent")
+
     }
     return (
         <section className="min-h-screen bg-[#0F172A] flex flex-col relative z-20 transition-colors duration-1000">
