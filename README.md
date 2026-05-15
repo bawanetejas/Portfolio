@@ -1,16 +1,103 @@
-# React + Vite
+# Tejas Bawane — Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio showcasing my full-stack projects, technical skills, internship experience, and AI-powered applications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 About The Portfolio
 
-## React Compiler
+This portfolio highlights my journey as a Full Stack Developer, featuring real-world projects involving:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Full-stack web development
+- Backend optimization
+- AI integrations
+- Dashboard systems
+- Automation workflows
+- Responsive UI development
 
-## Expanding the ESLint configuration
+The goal of this portfolio is to showcase both technical skills and problem-solving ability through impactful projects and production-oriented development.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- Modern responsive UI
+- Project showcase section
+- Skills and technology stack
+- Experience section
+- Resume download
+- Contact form integration
+- Clean animations and smooth UX
+- Mobile-friendly design
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React.js
+- JavaScript
+- TypeScript
+- HTML5
+- CSS3
+- SCSS
+- Tailwind CSS
+
+### Backend
+
+- Node.js
+- Express.js
+
+### Database
+
+- MongoDB
+- Supabase
+
+### Tools & Services
+
+- AWS Lambda
+- Git & GitHub
+- Vercel
+- Postman
+- Gemini API
+- OpenAI APIs
+
+---
+
+## 📌 Featured Projects
+
+### Escalation Management System
+
+A proactive escalation platform designed to detect abnormal account behavior and automate operational workflows.
+
+#### Key Highlights
+
+- Advanced dashboard filtering
+- Automated escalation emails
+- Backend API optimization
+- RCA/CSA workflow management
+
+#### Impact
+
+- Reduced API response time from 8s → 800ms
+- Improved operational visibility through automation
+
+---
+
+### PDP Audit Agent
+
+An AI-powered audit platform that analyzes Amazon PDP elements and generates optimization recommendations.
+
+#### Key Highlights
+
+- Seller Central OAuth integration
+- AI-generated optimization suggestions
+- Automated ASIN analysis
+
+#### Impact
+
+- Saved 2–3 minutes per ASIN audit
+- Improved workflow efficiency using AI automation
+
+---
